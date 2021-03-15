@@ -5,7 +5,11 @@ Table creation using a template and generator
 V1.0
 -Initial build
 
+
+
+
 #Data structure to build the table columns
+```
 $table_data = array(
             '0' => array(
                 'key' => 'key',
@@ -14,9 +18,11 @@ $table_data = array(
                 'class' => 'Any text class compatible with datatables'
             )
         );
+```
 
+```
 Render below 
-        return $this->render('my_grooming_space/datatables_one.html.twig',[
+        return $this->render('my_grooming_space/datatables_template.html.twig',[
             'table_create_type' => 'POST',
             'table_create_target' => 'api/create_table',
             'table_edit_type' => 'POST',
@@ -32,3 +38,4 @@ Render below
             'enable_edit' => true,
             'enable_remove' => false,
         ]);
+```
