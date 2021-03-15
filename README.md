@@ -20,22 +20,25 @@ $table_data = array(
         );
 ```
 
+enable_create/edit/remove
+Set 'true' to enable the respective buttons
+
 ```
 Render below 
         return $this->render('my_grooming_space/datatables_template.html.twig',[
-            'table_create_type' => 'POST',
-            'table_create_target' => 'api/create_table',
-            'table_edit_type' => 'POST',
-            'table_edit_target' => 'edittarget',
-            'table_remove_type' => 'POST',
-            'table_delete_target' => 'deletetarget',
+            'table_create_type' => 'POST/PUT/GET/DELETE',
+            'table_create_target' => 'api/create_target',
+            'table_edit_type' => 'POST/PUT/GET/DELETE',
+            'table_edit_target' => 'api/edit_target',
+            'table_remove_type' => 'POST/PUT/GET/DELETE',
+            'table_delete_target' => 'api/delete_target',
             'table_data_source' => '/api/testData/data',
-            'table_name' => 'Port to Fiber Mapping',
-            'table_id' => 'hc_mapping',
+            'table_name' => 'Table Name',
+            'table_id' => 'table_id',
             'table_data' => $table_data,
-            'row_id_value' => 'id',
-            'enable_create' => false,
-            'enable_edit' => true,
-            'enable_remove' => false,
+            'row_id_value' => 'Row the table should use as an ID. Example row_id',
+            'enable_create' => true/false,
+            'enable_edit' => true/false,
+            'enable_remove' => false/false,
         ]);
 ```
