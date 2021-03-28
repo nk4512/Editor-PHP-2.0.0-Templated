@@ -21,7 +21,7 @@ $table_data = array(
 ```
 
 enable_create/edit/remove
-Set 'true' to enable the respective buttons
+-Set 'true' to enable the respective buttons
 
 ```
 Render below 
