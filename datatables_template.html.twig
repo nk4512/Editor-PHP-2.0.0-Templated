@@ -1,3 +1,6 @@
+{#
+Version 1.0.0 - BASE
+#}
 {% extends 'blank.base.html.twig' %}
 
 
@@ -37,13 +40,21 @@
 {% endblock %}
 
 {% block style_sheets %}
+    {# BASE CSS #}
+    <link rel="stylesheet" type="text/css" href="{{ asset('Editor-PHP-2.0.0/datetime/1.0.2/css/dataTables.dateTime.min.css') }}"/>
+
+    {# SPECIFIC CSS STYLES #}
+    {# SEMANTIC UI #}
+
     <link rel="stylesheet" type="text/css" href="{{ asset('Editor-PHP-2.0.0/DataTables/semantic-ui/2.3.1/semantic.min.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('Editor-PHP-2.0.0/DataTables/DataTables-1.10.24/css/dataTables.semanticui.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('Editor-PHP-2.0.0/buttons/1.7.0/css/buttons.semanticui.min.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('Editor-PHP-2.0.0/select/1.3.2/css/select.semanticui.min.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('Editor-PHP-2.0.0/datetime/1.0.2/css/dataTables.dateTime.min.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('Editor-PHP-2.0.0/css/editor.semanticui.css') }}"/>
+
+    {# FIXED COLUMNS CSS STYLES #}
     <link rel="stylesheet" type="text/css" href="{{ asset('Editor-PHP-2.0.0/FixedColumns/css/fixedColumns.dataTables.css') }}"/>
+
     <style>
         .{{ table_id_search_box }}_input-group {
             position: relative;
